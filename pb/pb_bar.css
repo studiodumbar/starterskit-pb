@@ -1,0 +1,56 @@
+/** 
+ * pb_bar.css 
+ * 
+ * Styling for the presentation bar.
+ * 
+ * @version			1.0.0
+ * @date			yyyy-mm-dd
+ * @lastmodified	yyyy-mm-dd hh:mm
+ * @author			<author name>
+ * @project			<project name>
+ * @link			http://www.website.com
+ * @cssdoc			version 1.0-pre
+ *
+ */
+
+body { _padding-top: 6em; }
+.pb_bar { background: transparent url(pb_shadow.png) left top repeat-x; min-width: 942px; width: 100%; position: fixed; bottom: 0; left: 0; _background: none; _border-bottom: 1px solid #fff; _position: absolute; _top: 0; _left: 0; }
+
+.pb_bar div { background: #fff; margin: 1.6em 0 0 0; padding: 0; _border-bottom: 1px solid #ddd; _margin: 0; }
+
+.pb_bar ul { list-style-type: none;	margin: 0; padding: 0; }
+.pb_bar li { background: none; display: block; float: left; padding: 0; margin: 0;}
+
+.pb_bar select { margin: 0.6em 0; padding: 0; }
+.pb_bar a { cursor: pointer; }
+
+.pb_prev a, .pb_next a { display: block; margin: 0; *margin-top: 5px; padding: 0.7em; text-decoration: none; }
+.pb_prev a img, .pb_next a img { border: none; margin: 0; padding: 0; }
+.pb_prev, .pb_next{ width:25px; display:block; height:20px}
+
+.pb_color li { margin: 0.7em 0.2em 0; *margin-top: 0.9em; _margin-top: 0.8em; }
+.pb_color a { font: 0/0 sans-serif; text-indent: -9000px; color: transparent; display: block; border: 2px solid #fff; height: 14px; _height: 15px; margin: 0; padding: 0; width: 14px; text-decoration: none; }
+.pb_color a:hover, .pb_color a.pb_selected { border-color: #222; color: transparent; }
+.pb_color a.pb_selected { cursor: default; }
+
+.pb_color a.dark_brown { background-color: #623327; }
+.pb_color a.purple { background-color: #42145f; }
+.pb_color a.dark_green { background-color: #275937; }
+.pb_color a.ruby { background-color: #ca005a; }
+.pb_color a.red { background-color: #ca005a; }
+.pb_color a.violet { background-color: #a90061; }
+.pb_color a.moss_green { background-color: #777c00; }
+.pb_color a.brown { background-color: #94710a; }
+.pb_color a.green { background-color: #39870c; }
+.pb_color a.azure { background-color: #007bc7; }
+.pb_color a.light_blue { background-color: #8fcae7; }
+.pb_color a.pink { background-color: #f092cd; }
+.pb_color a.yellow { background-color: #f9e11e; }
+.pb_color a.dark_yellow { background-color: #ffb612; }
+.pb_color a.mint_green { background-color: #76d2b6; }
+.pb_color a.orange { background-color: #e17000; }
+
+.pb_bar div:after { clear: both; content: '.'; display: block; visibility: hidden; height: 0; }
+.pb_bar div { display: inline-block; }
+* html .pb_bar div { height: 1%; }
+.pb_bar div { display: block; }
