@@ -32,6 +32,14 @@ Mac
 ++++++++++++++++++++++   VERSIES   ++++++++++++++++++++++
 *********************************************************
 
+versie 	1.2.3
+datum	15 juni 2010
+
+=> Logo keuze verwijderd uit presentatie bar (‘commented-out’)
+=> Alle templates dragen nu (enkel) het Rijksoverheid-logo
+
+*********************************************************
+
 versie 	1.2.2
 datum	30 november 2009
 
@@ -65,7 +73,7 @@ versie 	1.2.
 datum	3 november 2009
 
 => bevindingen webrichtlijnen inspectie doorgevoerd
-=> pagina's zie (minimaal) gewijzigd zijn: 
+=> pagina's zie (minimaal) gewijzigd zijn:
 
 1) basis_elementen.html
 2) content_6.html
