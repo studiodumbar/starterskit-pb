@@ -6,7 +6,7 @@ var cookieLogoHeight = "logoHeight";
 var cookieColor = "color";
 
 // Text
-var closeButtonText = "Verberg pesentatie balk";
+// var closeButtonText = "Verberg pesentatie balk";
 var showButtonText = "Toon pesentatie balk";
 var prevButtonLogoText = "Vorige Afzender";
 var nextButtonLogoText = "Volgende Afzender";
@@ -18,7 +18,7 @@ var containerDiv = "pb_bar";
 var colorBoxDiv = "pb_color_box";
 var colorActiveDiv = "pb_selected";
 var clearDiv = "pb_clear";
-var closeButtonClass = "pb_hide";
+// var closeButtonClass = "pb_hide";
 var showButtonClass = "pb_show";
 var templateListClass = "pb_templates";
 var colorListClass = "pb_color";
@@ -287,16 +287,16 @@ function constructTopBar(){
 	$(topBar).css("display", "block");
 
 	// Construct Close Button : When clicked the topBar will be sliding up
-	var closeButton = document.createElement('li');
-	var closeButtonA = document.createElement('a');
-	$(closeButtonA).addClass(closeButtonClass).attr("title", closeButtonText);
-	closeButtonA.innerHTML = closeButtonText;
-	$(closeButtonA).click(function(event){
-		$(topBar).slideUp("fast", function(){
-			$(showButton).insertBefore(topBar);
-		});
-	});
-	closeButton.appendChild(closeButtonA);
+//	var closeButton = document.createElement('li');
+//	var closeButtonA = document.createElement('a');
+//	$(closeButtonA).addClass(closeButtonClass).attr("title", closeButtonText);
+//	closeButtonA.innerHTML = closeButtonText;
+//	$(closeButtonA).click(function(event){
+//		$(topBar).slideUp("fast", function(){
+//			$(showButton).insertBefore(topBar);
+//		});
+//	});
+//	closeButton.appendChild(closeButtonA);
 
 	// Construct showAgain button : When clicked the topBar will be shown again
 	var showButton = document.createElement("ul");
@@ -448,6 +448,10 @@ function constructTopBar(){
 		$.cookie(cookieLogo, logo_value);
 	}
 
+	// ----------------- \\
+	// PREV/NEXT BUTTONS \\
+	// ----------------- \\
+
 	// Display/Hide prev/next button only when needed
 	function toggleButton(select, nextButtonA, prevButtonA){
 		if (select.selectedIndex > 0) {
@@ -597,11 +601,11 @@ function constructTopBar(){
 	fieldSetLeft.appendChild(nextButtonTemplate);
 	topBar.appendChild(fieldSetLeft);
 
-	// Append logo selector
-	fieldSetRight.appendChild(prevButton);
-	fieldSetRight.appendChild(logoSelector);
-	fieldSetRight.appendChild(nextButton);
-	topBar.appendChild(fieldSetRight);
+	// Append logo Selector (uncomment to re-add the logo selector to the ‘Presentation Bar’)
+//	fieldSetRight.appendChild(prevButton);
+//	fieldSetRight.appendChild(logoSelector);
+//	fieldSetRight.appendChild(nextButton);
+//	topBar.appendChild(fieldSetRight);
 
 	// Append color Selector
 	topBar.appendChild(colorSelector);
@@ -609,17 +613,6 @@ function constructTopBar(){
 	// Append close Button
 	// fieldSetRight.appendChild(closeButton);
 
-	/*
-	var clearBox = document.createElement('div');
-	$(clearBox).addClass(clearDiv);
-	topBar.appendChild(clearBox);
-	*/
 	container.appendChild(topBar);
-	/*
-	var clearBox2 = document.createElement('div');
-	$(clearBox2).addClass(clearDiv);
-	container.appendChild(clearBox2);
-	*/
-
 	document.body.appendChild(container);
 }
